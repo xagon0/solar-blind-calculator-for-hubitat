@@ -14,4 +14,36 @@ The SolarBlindCalculator is a smart solution crafted to enhance the comfort of y
 
 ## Getting Started
 
-To use this tool, clone the repository to your local machine or directly integrate with Hubitat.
+### Prerequisites
+
+- Latitude / Longitude of your Location
+
+### Installation
+
+1. Navigate to the **Drivers Code** section of your Hubitat interface.
+2. Click on the **+ New Driver** button.
+3. Copy the content of `solarBlindCalculator_Driver.groovy` and paste it into Hubitat.
+4. Save the driver.
+5. Create a new virtual device and assign the "Solar Blind Calculator Driver" as its driver.
+
+### Configuration
+
+Once the driver is added to a device, you will have the option to configure:
+
+- **Latitude**: Your current locations latitude.
+- **Longitude**: Your current locations longitude.
+- 
+## Usage
+
+Two primary commands can be executed:
+
+1. **getBlindPercentage(windowAzimuthMin, windowAzimuthMax, windowMinElevation, windowMaxElevation, blindMinPercentage, blindMaxPercentage, blindMaxPercentageOutsideField)**: Updates the azimuth, elevation, and calculated blind percentage.
+2. **getSolarAzimuthElevation()**: Updates the azimuth, and elevation for your own calculation.
+
+## Contributing
+
+Feel free to fork, modify, and submit pull requests. All contributions are welcome!
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details.
